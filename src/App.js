@@ -1,0 +1,19 @@
+import React, { useState } from 'react';
+import data from './data';
+import List from './List';
+function App() {
+  const [people, setPeople] = useState(data)
+  return (
+  <main>
+    <div className="container">
+      <h3>{people.length} birthday Today</h3>
+      <List people={people} />
+      <button onClick={() =>  setPeople([])} >
+        Click Me
+      </button>
+    </div>
+  </main>
+  );
+}
+
+export default App;
